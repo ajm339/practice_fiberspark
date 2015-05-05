@@ -1,0 +1,31 @@
+<h1>Listing speedtests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Provider</th>
+      <th>Ip address</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @speedtests.each do |speedtest| %>
+      <tr>
+        <td><%= speedtest.user_id %></td>
+        <td><%= speedtest.provider %></td>
+        <td><%= speedtest.ip_address %></td>
+        <td><%= speedtest.user %></td>
+        <td><%= link_to 'Show', speedtest %></td>
+        <td><%= link_to 'Edit', edit_speedtest_path(speedtest) %></td>
+        <td><%= link_to 'Destroy', speedtest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Speedtest', new_speedtest_path %>

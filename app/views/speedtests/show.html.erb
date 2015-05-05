@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @speedtest.user_id %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @speedtest.provider %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @speedtest.ip_address %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @speedtest.user %>
+</p>
+
+<%= link_to 'Edit', edit_speedtest_path(@speedtest) %> |
+<%= link_to 'Back', speedtests_path %>
