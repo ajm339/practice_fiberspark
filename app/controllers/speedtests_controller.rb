@@ -29,6 +29,7 @@ class SpeedtestsController < ApplicationController
   # POST /speedtests.json
   def create
     @speedtest = Speedtest.new(speedtest_params)
+    @speedtest.user = current_user
 
     respond_to do |format|
       if @speedtest.save
